@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineStream</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="CineStream Logo">
+            </a>
+            
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#tv-shows">TV Shows</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#new">New & Popular</a></li>
+                    <li><a href="#my-list">My List</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search movies...">
+                        <div class="search-results"></div>
+                    </div>
+                    
+                    
+                    <div class="profile-menu">
+                        <img src="https://i.pravatar.cc/40" alt="Profile" class="profile-img">
+                        <div class="profile-dropdown">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="#"><i class="fas fa-cog"></i> Account</a>
+                            <a href="#" id="watchlist-link"><i class="fas fa-bookmark"></i> My Watchlist</a>
+                            <hr>
+                            <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <div class="hero-backdrop">
+                <div class="hero-video-container">
+                    <video autoplay muted loop class="hero-video">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">Unlimited movies, TV shows, and more</h1>
+                <p class="hero-subtitle">Watch anywhere. Cancel anytime.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary hero-play">
+                        <i class="fas fa-play"></i> Play
+                    </button>
+                    <button class="btn btn-secondary hero-info">
+                        <i class="fas fa-info-circle"></i> More Info
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-bottom-fade"></div>
+        </section>
+
+        <!-- Movie Categories -->
+        <section class="categories-container">
+            <div class="category-filter">
+                <select id="category-filter" class="filter-dropdown">
+                    <option value="all">All Categories</option>
+                    <option value="now_playing">Now Playing</option>
+                    <option value="popular">Popular</option>
+                    <option value="top_rated">Top Rated</option>
+                    <option value="upcoming">Upcoming</option>
+                </select>
+            </div>
+            
+            <!-- Categories will be dynamically loaded here -->
+            <div id="categories-list"></div>
+            
+            <!-- Loading skeleton -->
+            <div class="skeleton-loader">
+                <div class="skeleton-row">
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-controls"></div>
+                </div>
+                <div class="skeleton-cards">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Watchlist Section -->
+        <section class="watchlist-section" id="my-list">
+            <div class="section-header">
+                <h2><i class="fas fa-bookmark"></i> My Watchlist</h2>
+                <button class="clear-watchlist btn btn-small">Clear All</button>
+            </div>
+            <div class="watchlist-container" id="watchlist-container">
+                <p class="empty-watchlist">Your watchlist is empty. Add movies by clicking the bookmark icon!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Movie Details Modal -->
+    <div class="modal-overlay" id="movie-modal">
+        <div class="modal-container">
+            <button class="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-content">
+                <div class="modal-poster-container">
+                    <img class="modal-poster" src="" alt="Movie Poster">
+                    <div class="modal-rating">
+                        <i class="fas fa-star"></i>
+                        <span class="rating-value">0.0</span>
+                    </div>
+                </div>
+                
+                <div class="modal-details">
+                    <h2 class="modal-title"></h2>
+                    <div class="modal-meta">
+                        <span class="modal-release"></span>
+                        <span class="modal-runtime"></span>
+                        <span class="modal-genres"></span>
+                    </div>
+                    
+                    <p class="modal-overview"></p>
+                    
+                    <div class="modal-actions">
+                        <button class="btn btn-primary play-trailer">
+                            <i class="fas fa-play"></i> Play Trailer
+                        </button>
+                        <button class="btn btn-secondary toggle-watchlist">
+                            <i class="far fa-bookmark"></i> Add to Watchlist
+                        </button>
+                    </div>
+                    
+                    <div class="modal-cast">
+                        <h3>Cast</h3>
+                        <div class="cast-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trailer Modal -->
+    <div class="trailer-modal" id="trailer-modal">
+        <div class="trailer-container">
+            <button class="trailer-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="trailer-video-container">
+                <iframe id="trailer-video" width="100%" height="100%" src="" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Audio and Subtitles</a>
+                <a href="#">Media Center</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Speed Test</a>
+                <a href="#">Legal Notices</a>
+                <a href="#">Only on CineStream</a>
+            </div>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

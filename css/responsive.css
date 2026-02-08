@@ -1,0 +1,233 @@
+/* Responsive Design Specific Styles */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+    .nav-container, .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .hero-content {
+        max-width: 700px;
+    }
+    
+    .movie-card {
+        width: 220px;
+    }
+    
+    .movie-poster-container {
+        height: 330px;
+    }
+}
+
+/* Tablet landscape (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .nav-menu {
+        gap: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .movie-card {
+        width: 190px;
+    }
+}
+
+/* Tablet portrait (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .nav-actions {
+        gap: 1rem;
+    }
+    
+    .search-input.active {
+        width: 200px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .categories-container {
+        padding: 2rem;
+    }
+    
+    .modal-container {
+        width: 95%;
+    }
+}
+
+/* Mobile landscape (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .hero-banner {
+        height: 70vh;
+    }
+    
+    .hero-content {
+        left: 1rem;
+        right: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .categories-container {
+        padding: 1rem;
+    }
+    
+    .row-title {
+        font-size: 1.25rem;
+    }
+    
+    .watchlist-section {
+        padding: 1rem;
+    }
+}
+
+/* Mobile portrait (up to 575px) */
+@media (max-width: 575px) {
+    .navbar {
+        padding: 0.75rem;
+    }
+    
+    .logo img {
+        height: 28px;
+    }
+    
+    .hero-banner {
+        height: 60vh;
+        min-height: 350px;
+    }
+    
+    .hero-content {
+        left: 0.75rem;
+        right: 0.75rem;
+        bottom: 15%;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .categories-container {
+        padding: 0.75rem;
+    }
+    
+    .movie-row {
+        margin-bottom: 2rem;
+    }
+    
+    .movie-card {
+        width: 130px;
+    }
+    
+    .movie-poster-container {
+        height: 195px;
+    }
+    
+    .movie-title {
+        font-size: 0.85rem;
+    }
+    
+    .movie-overview {
+        display: none;
+    }
+    
+    .modal-container {
+        width: 98%;
+        padding: 0.5rem;
+    }
+    
+    .modal-content {
+        padding: 1rem;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+    
+    .footer {
+        padding: 1rem;
+    }
+    
+    .footer-links {
+        gap: 0.5rem;
+    }
+    
+    .footer-links a {
+        font-size: 0.75rem;
+    }
+}
+
+/* Small mobile devices (up to 320px) */
+@media (max-width: 320px) {
+    .movie-card {
+        width: 110px;
+    }
+    
+    .movie-poster-container {
+        height: 165px;
+    }
+    
+    .search-input.active {
+        width: 150px;
+    }
+    
+    .hero-title {
+        font-size: 1.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.8rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar, .hero-video-container, .row-controls, .movie-actions,
+    .theme-toggle, .search-container, .profile-menu,
+    .modal-actions, .trailer-modal, .footer {
+        display: none !important;
+    }
+    
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+    
+    .hero-banner {
+        height: auto;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        position: static;
+        padding: 2rem;
+        color: black;
+    }
+    
+    .movie-card {
+        break-inside: avoid;
+    }
+}
