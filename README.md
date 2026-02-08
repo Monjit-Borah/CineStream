@@ -11,29 +11,8 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![TMDB API](https://img.shields.io/badge/TMDB-API-01d277?style=flat-square&logo=themoviedatabase&logoColor=white)](https://www.themoviedb.org/)
 
-[Live Demo](#) • [Features](#-features) • [Installation](#-installation) • [Documentation](#-documentation)
-
+[Live Demo](#) • [Features](#-features) 
 </div>
-
----
-
-## 📋 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Configuration](#-configuration)
-- [Deployment](#-deployment)
-- [API Integration](#-api-integration)
-- [Customization](#-customization)
-- [Performance](#-performance)
-- [Browser Support](#-browser-support)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Screenshots](#-screenshots)
 
 ---
 
@@ -706,7 +685,7 @@ Special thanks to:
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 ### Desktop View
 ![Desktop Homepage](assets/home.png)
@@ -732,7 +711,7 @@ Special thanks to:
 
 **Made with ❤️ by MONJIT BORAH**
 
-[LinkedIn](www.linkedin.com/in/monjit-borah)
+[LinkedIn](https://www.linkedin.com/in/monjit-borah)
 
 ---
 
