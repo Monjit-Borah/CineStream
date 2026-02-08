@@ -712,7 +712,7 @@ Special thanks to:
 ![Desktop Homepage](assets/home.png)
 *Homepage with trending movies and categories*
 
-![Movie Details Modal](assets/Mobile.png)
+![Movie Details Modal](assets/movies.png)
 *Detailed movie information with cast and trailers*
 
 ### Mobile View
@@ -730,7 +730,7 @@ Special thanks to:
 
 ### ⭐ Star this repository if you find it helpful!
 
-**Made with ❤️ by [MONJIT BORAH]**
+**Made with ❤️ by MONJIT BORAH**
 
 [LinkedIn](www.linkedin.com/in/monjit-borah)
 
