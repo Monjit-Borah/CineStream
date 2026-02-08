@@ -672,19 +672,6 @@ Special thanks to:
 
 ---
 
-## 📊 Project Stats
-
-![GitHub stars](https://img.shields.io/github/stars/yourusername/CineStream?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/CineStream?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/yourusername/CineStream?style=social)
-
-![GitHub issues](https://img.shields.io/github/issues/yourusername/CineStream)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/CineStream)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/CineStream)
-![GitHub code size](https://img.shields.io/github/languages/code-size/yourusername/CineStream)
-
----
-
 ## 📸 Screenshots
 
 ### Desktop View
